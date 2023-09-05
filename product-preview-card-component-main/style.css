@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    font-size: 14px;
+    background-color: var(--Cream);
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    min-height: 100vh;
+}
+
+main{
+    border-radius: 1rem;
+    display: flex;
+    justify-self: center;
+    max-width: 650px;
+    margin-top: 5rem;
+}
+
+.product-image{
+    background-image: url('./images/image-product-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100%;
+    width: 275px;
+    border-radius: 8px 0 0 8px;
+}
+
+main article{
+    display: grid;
+    background: var(--White);
+    height: 100%;
+    width: 275px;
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+}
+
+main article h1{
+    color: var(--Dark-grayish-blue);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Fraunces', serif;
+}
+
+main article h2{
+    font-size: 35px;
+    line-height: 1.1;
+    color: var(--Verydark-blue);
+    font-family: 'Fraunces', serif;
+}
+
+main article p{
+    color: var(--Dark-grayish-blue);
+    font-size: 15px;
+}
+
+main article div{
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+main article div > strong{
+    color: var(--Dark-cyan);
+    font-weight: 800;
+    font-size: 34px;
+}
+
+main article div > s{
+    color: var(--Dark-grayish-blue);
+}
+
+main article button{
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    border: none;
+    border-radius: 8px;
+    height: 2.5rem;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: auto;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
