@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assinment1.css">
+</head>
+<body>
+    <form action="" onSubmit={handleSubmit}>
+        <header>
+            <h1>Staff Biometric Database</h1>
+            <p>Fill in the form to update your data</p>
+        </header>
+        <section>
+            <article>
+                <label htmlFor="Name">Full Name</label>
+                <input type="text" id='Name' />
+                <p>Invalid name entered</p>
+            </article>
+            <article>
+                <label htmlFor="Email">Email</label>
+                <input type="email" id='Email' />
+                <p>Invalid email entered</p>
+            </article>
+            <article>
+                <label htmlFor="Phone">Phone</label>
+                <input type="tel" id='Phone' />
+                <p>Invalid phone entered</p>
+            </article>
+            <article>
+                <label htmlFor="Dept">Department</label>
+                <input type="text" id='Dept' />
+                <p>Invalid department entered</p>
+            </article>
+        </section>
+        <button>Submit</button>
+    </form> 
+</body>
+</html>
