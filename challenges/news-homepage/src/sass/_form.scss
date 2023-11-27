@@ -1,0 +1,194 @@
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    column-gap: 4rem;
+    align-items: center;
+    max-width: 50rem;
+
+    @media(max-width: 64rem){
+        grid-template-columns: 1fr;
+        max-width: 30rem;
+        row-gap: 3rem;
+    }
+
+    @media(max-width: 37.5rem){
+        grid-template-columns: 1fr;
+        max-width: 310px;
+        row-gap: 3rem;
+    }
+
+    &-left{
+        color: $Soft-orange;
+        display: grid;
+        row-gap: 1rem;
+
+        &>h1{
+            font-size: 32px;
+            line-height: 1.1;
+            word-spacing: 5px;
+            letter-spacing: 1px;
+
+            @media(max-width: 64rem){
+                text-align: center;
+                font-size: 38px;
+                letter-spacing: 1.5px;
+                line-height: 1.3;
+            }
+            @media(max-width: 37.5rem){
+                font-size: 28px;
+            }
+        }
+
+        &>p{
+            font-size: 15.5px;
+            line-height: 1.3;
+
+            @media(max-width: 64rem){
+                font-size: 22px;
+                text-align: center;
+                line-height: 1.8;
+            }
+
+            @media(max-width: 37.5rem){
+                font-size: 16px;
+            }
+        }
+    }
+
+    &-right{
+        display: grid;
+        row-gap: 1rem;
+
+        &>h2{
+            background-color: $Dark-grayish-blue;
+            color: $Off-white;
+            font-size: 15px;
+            text-align: center;
+            padding: .5rem;
+            border-radius: 8px;
+
+            @media(max-width: 64rem){
+                font-size: 30.5px;
+            }
+
+            @media(max-width: 37.5rem){
+                font-size: 19.5px;
+                font-weight: 500;
+            }
+        }
+
+        &-form{
+            background-color: $Off-white;
+            border: 1px solid $Grayish-blue;
+            border-radius: 8px;
+            display: grid;
+            row-gap: 1.2rem;
+            padding: 2rem 1rem;
+
+            &-field{
+                display: grid;
+                row-gap: .3rem;
+                position: relative;
+
+                &>input{
+                    padding: .6rem;
+                    border-radius: 8px;
+                    outline: none;
+                    border: 1px solid $Grayish-blue;
+                    
+                    @media(max-width: 64rem){
+                        padding: 1rem;
+                        font-size: 16px;
+                    }
+
+                    @media(max-width: 37.5rem){
+                        padding: .7rem;
+                    }
+                }
+
+                &>svg{
+                    position: absolute;
+                    right: .5rem;
+                    top: 13%;
+                    font-size: 20px;
+                    display: none;
+                }
+
+                &>p{
+                    font-size: 12px;
+                    margin-left: auto;
+                    display: none;
+                }
+            }
+
+            .form-btn{
+                background-color: $Soft-orange;
+                padding: .8rem;
+                border: none;
+                border-radius: 8px;
+                color: $Off-white;
+                cursor: pointer;
+                text-transform: uppercase;
+
+                &:hover{
+                    background-color: transparent;
+                    color: $Dark-grayish-blue;
+                    border: 1px solid $Soft-orange;
+                }
+                
+                &:active{
+                    margin: 0 .2rem;
+                }
+
+                @media(max-width: 64rem){
+                    padding: 1rem;
+                    font-size: 20px;
+                }
+
+                @media(max-width: 37.5rem){
+                    padding: .7rem;
+                    font-size: 17px;
+                }
+            }
+
+            &>p{
+                font-size: 9.5px;
+                text-align: center;
+
+                & .special{
+                    color: $Soft-red;
+                }
+
+                @media(max-width: 64rem){
+                    font-size: 13px;
+                }
+                @media(max-width: 37.5rem){
+                    font-size: 11px;
+                }
+            }
+
+        }
+    }
+}
+
+// notifying user when a field is empty
+.error{
+    color: $Soft-red;
+
+    &>input{
+        border: 1px solid $Soft-red;
+
+        &::placeholder{
+            color: $Soft-red;
+        }
+    }
+
+    &>svg{
+        display: block;
+    }
+
+    &>p{
+        display: block;
+    }
+}
