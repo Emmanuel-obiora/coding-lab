@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Inter:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Inter:wght@400;700&family=Josefin+Sans:wght@300&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+$White: hsl(0, 0%, 100%);
+$Black: hsl(0, 0%, 0%);
+$Dark-Gray: hsl(0, 0%, 55%);
+$Very-Dark-Gray: hsl(0, 0%, 41%);
+
+body{
+    align-items: center;
+    font-family:Alata, Josefin Sans;
+    font-size: 15px;
+    max-height:100vh;
+    max-width:100vw;
+    background-color: $White;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
