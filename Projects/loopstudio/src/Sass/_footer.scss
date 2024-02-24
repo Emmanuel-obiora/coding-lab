@@ -1,0 +1,29 @@
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    list-style: none;
+    height: 20vh;
+}
+.footerleft{
+    margin-left: 6rem;
+    margin-top: 1.5rem;
+}
+
+.footerright{
+    margin-right: 6rem;
+    margin-top: 1.5rem;
+    &>p{
+        padding-top: 1rem;
+    }
+}
+.footerleftnav{
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    text-decoration: none;
+    padding-top: 1rem;
+
+}
