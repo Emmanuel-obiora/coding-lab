@@ -1,0 +1,28 @@
+@import 'nav';
+
+.Header{
+    background-image: url(/src/images/desktop/image-hero.jpg);
+    background-size: cover;
+    height: 50vh;
+    color: $White;
+    padding: 2rem 5rem 0 5rem;
+
+        &>div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 2rem;
+
+        }
+}
+
+ .immersive{
+    font-size: 3rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding: 1rem;
+    width: 30rem;
+    height: 12rem;
+    border: 3px solid;
+    margin: 0;
+ }
