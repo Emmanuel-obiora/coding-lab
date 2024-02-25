@@ -1,0 +1,177 @@
+.main{
+    display: grid;
+    row-gap: 4rem;
+
+    &-top{
+        display: flex;
+        gap: 1rem;
+
+        @media(max-width: 64rem){
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        &-section-left{
+            display: grid;
+            row-gap: 1.5rem;
+
+            &>span{
+                background: url('/public/image-web-3-desktop.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                min-height: 20rem;
+
+                @media(max-width: 64rem){
+                    background: url('/public/image-web-3-mobile.jpg');
+                }
+            }
+
+            &>article{
+                display: grid;
+                grid-template-columns: .5fr .9fr;
+                column-gap: 9rem;
+
+                @media(max-width: 64rem){
+                    column-gap: 5rem;
+                }
+
+                @media(max-width: 37.5rem){
+                    grid-template-columns: 1fr;
+                    column-gap: 0;
+                    row-gap: 1rem;
+                }
+
+                &>h1{
+                    font-size: 40px;
+                    font-weight: 800;
+                    word-spacing: 3px;
+                    letter-spacing: 2px;
+                    line-height: 1;
+                }
+
+                &>div{
+                    display: grid;
+                    row-gap: 1rem;
+
+                    &>p{
+                        font-size: 17px;
+                        word-spacing: 2px;
+                        line-height: 1.3;
+                    }
+
+                    &>button{
+                        width: max-content;
+                        padding: .3rem 1.2rem;
+                        text-transform: uppercase;
+                        border-radius: 8px;
+                        outline: none;
+                        border: none;
+                        background: $Soft-red;
+                        color: $Off-white;
+                        letter-spacing: 2px;
+                        word-spacing: 4px;
+                        cursor: pointer;
+
+                        &:hover{
+                            border: 1px solid $Soft-red;
+                            background: transparent;
+                            color: $Soft-red;
+                        }
+
+                        @media(max-width: 37.5rem){
+                            height: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-section-right{
+            display: grid;
+            background: $Very-dark-blue;
+            color: $Off-white;
+            padding: 1rem 1.5rem;
+
+            &>h2{
+                font-size: 32px;
+                font-weight: 700;
+                color: $Soft-orange;
+            }
+
+            &>article{
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+
+                @media(max-width: 64rem){
+                    gap: 1rem;
+                    margin-top: 2rem;
+                }
+
+
+                &>p{
+                    color: $Grayish-blue;
+                    font-size: 14px;
+                    padding-bottom: .7rem;
+                    border-bottom: 1px solid $Grayish-blue;
+
+                    // &:last-child{
+                    //     border-bottom: none;
+                    // }
+                }
+            }
+        }
+    }
+
+    &-bot{
+        display: flex;
+        gap: 1.5rem;
+
+        @media(max-width: 64rem){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media(max-width: 37.5rem){
+            grid-template-columns: 1fr;
+        }
+
+        &>section{
+            display: flex;
+            gap: 1.5rem;
+
+            &>img{
+                max-width: 35%;
+            }
+
+            &>article{
+                display: grid;
+                align-items: center;
+                row-gap: .2rem;
+
+                &>strong{
+                    font-size: 25px;
+                    color: $Grayish-blue;
+                }
+
+                &>h3{
+                    font-size: 18.5px;
+                    color: $Very-dark-blue;
+                }
+
+                &>p{
+                    font-size: 14.5px;
+                    color: $Dark-grayish-blue;
+                    font-weight: 700;
+                    line-height: 1.6;
+
+                    @media(max-width: 64rem){
+                        line-height: 1.4;
+                    }
+                }
+            }
+        }
+    }
+
+}
