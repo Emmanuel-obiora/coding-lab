@@ -1,0 +1,41 @@
+.nav{
+
+    @media(max-width: 37.5rem){
+        display: none;
+    }
+
+    &>ul{
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+        align-items: center;
+        gap: 2rem;
+        position: relative;
+
+        @media(max-width: 37.5rem){
+            flex-direction: column;
+            position: absolute;
+            background: $Off-white;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 70%;
+            padding: 8rem 0 0 1.5rem;
+            align-items: flex-start;
+        }
+
+        &>li>a{
+            text-decoration: none;
+            color: $Grayish-blue;
+            font-weight: 700;
+
+            @media(max-width: 37.5rem){
+                color: $Very-dark-blue;
+            }
+        }
+    }
+}
+
+.open-mobile-nav{
+    display: flex;
+}

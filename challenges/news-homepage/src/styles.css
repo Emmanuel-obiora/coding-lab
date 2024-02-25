@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  padding: 2rem 5rem;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+@media (max-width: 37.5rem) {
+  body {
+    padding: 1rem;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  z-index: 10;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 37.5rem) {
+  .menu {
+    display: block;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .nav {
+    display: none;
+  }
+}
+.nav > ul {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+@media (max-width: 37.5rem) {
+  .nav > ul {
+    flex-direction: column;
+    position: absolute;
+    background: hsl(36, 100%, 99%);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    padding: 8rem 0 0 1.5rem;
+    align-items: flex-start;
+  }
+}
+.nav > ul > li > a {
+  text-decoration: none;
+  color: hsl(233, 8%, 79%);
+  font-weight: 700;
+}
+@media (max-width: 37.5rem) {
+  .nav > ul > li > a {
+    color: hsl(240, 100%, 5%);
+  }
+}
+
+.open-mobile-nav {
+  display: flex;
+}
+
+.main {
+  display: grid;
+  row-gap: 4rem;
+}
+.main-top {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 64rem) {
+  .main-top {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+.main-top-section-left {
+  display: grid;
+  row-gap: 1.5rem;
+}
+.main-top-section-left > span {
+  background: url("/public/image-web-3-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20rem;
+}
+@media (max-width: 64rem) {
+  .main-top-section-left > span {
+    background: url("/public/image-web-3-mobile.jpg");
+  }
+}
+.main-top-section-left > article {
+  display: grid;
+  grid-template-columns: 0.5fr 0.9fr;
+  column-gap: 9rem;
+}
+@media (max-width: 64rem) {
+  .main-top-section-left > article {
+    column-gap: 5rem;
+  }
+}
+@media (max-width: 37.5rem) {
+  .main-top-section-left > article {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 1rem;
+  }
+}
+.main-top-section-left > article > h1 {
+  font-size: 40px;
+  font-weight: 800;
+  word-spacing: 3px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+.main-top-section-left > article > div {
+  display: grid;
+  row-gap: 1rem;
+}
+.main-top-section-left > article > div > p {
+  font-size: 17px;
+  word-spacing: 2px;
+  line-height: 1.3;
+}
+.main-top-section-left > article > div > button {
+  width: max-content;
+  padding: 0.3rem 1.2rem;
+  text-transform: uppercase;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  background: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  cursor: pointer;
+}
+.main-top-section-left > article > div > button:hover {
+  border: 1px solid hsl(5, 85%, 63%);
+  background: transparent;
+  color: hsl(5, 85%, 63%);
+}
+@media (max-width: 37.5rem) {
+  .main-top-section-left > article > div > button {
+    height: 2.5rem;
+  }
+}
+.main-top-section-right {
+  display: grid;
+  background: hsl(240, 100%, 5%);
+  color: hsl(36, 100%, 99%);
+  padding: 1rem 1.5rem;
+}
+.main-top-section-right > h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(35, 77%, 62%);
+}
+.main-top-section-right > article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (max-width: 64rem) {
+  .main-top-section-right > article {
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+}
+.main-top-section-right > article > p {
+  color: hsl(233, 8%, 79%);
+  font-size: 14px;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid hsl(233, 8%, 79%);
+}
+.main-bot {
+  display: flex;
+  gap: 1.5rem;
+}
+@media (max-width: 64rem) {
+  .main-bot {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 37.5rem) {
+  .main-bot {
+    grid-template-columns: 1fr;
+  }
+}
+.main-bot > section {
+  display: flex;
+  gap: 1.5rem;
+}
+.main-bot > section > img {
+  max-width: 35%;
+}
+.main-bot > section > article {
+  display: grid;
+  align-items: center;
+  row-gap: 0.2rem;
+}
+.main-bot > section > article > strong {
+  font-size: 25px;
+  color: hsl(233, 8%, 79%);
+}
+.main-bot > section > article > h3 {
+  font-size: 18.5px;
+  color: hsl(240, 100%, 5%);
+}
+.main-bot > section > article > p {
+  font-size: 14.5px;
+  color: hsl(236, 13%, 42%);
+  font-weight: 700;
+  line-height: 1.6;
+}
+@media (max-width: 64rem) {
+  .main-bot > section > article > p {
+    line-height: 1.4;
+  }
+}
+
+.footer {
+  font-size: 13px;
+  text-align: center;
+  background: hsl(5, 85%, 63%);
+  height: 5rem;
+  color: hsl(36, 100%, 99%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+@media (max-width: 37.5rem) {
+  .footer {
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
+}
+.footer > a {
+  color: hsl(228, 45%, 44%);
+}
+
+.main-layout {
+  display: grid;
+  min-height: 100vh;
+  row-gap: 2rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  column-gap: 4rem;
+  align-items: center;
+  max-width: 50rem;
+}
+@media (max-width: 64rem) {
+  .form {
+    grid-template-columns: 1fr;
+    max-width: 30rem;
+    row-gap: 3rem;
+  }
+}
+@media (max-width: 37.5rem) {
+  .form {
+    grid-template-columns: 1fr;
+    max-width: 310px;
+    row-gap: 3rem;
+  }
+}
+.form-left {
+  color: hsl(35, 77%, 62%);
+  display: grid;
+  row-gap: 1rem;
+}
+.form-left > h1 {
+  font-size: 32px;
+  line-height: 1.1;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+}
+@media (max-width: 64rem) {
+  .form-left > h1 {
+    text-align: center;
+    font-size: 38px;
+    letter-spacing: 1.5px;
+    line-height: 1.3;
+  }
+}
+@media (max-width: 37.5rem) {
+  .form-left > h1 {
+    font-size: 28px;
+  }
+}
+.form-left > p {
+  font-size: 15.5px;
+  line-height: 1.3;
+}
+@media (max-width: 64rem) {
+  .form-left > p {
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.8;
+  }
+}
+@media (max-width: 37.5rem) {
+  .form-left > p {
+    font-size: 16px;
+  }
+}
+.form-right {
+  display: grid;
+  row-gap: 1rem;
+}
+.form-right > h2 {
+  background-color: hsl(236, 13%, 42%);
+  color: hsl(36, 100%, 99%);
+  font-size: 15px;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+@media (max-width: 64rem) {
+  .form-right > h2 {
+    font-size: 30.5px;
+  }
+}
+@media (max-width: 37.5rem) {
+  .form-right > h2 {
+    font-size: 19.5px;
+    font-weight: 500;
+  }
+}
+.form-right-form {
+  background-color: hsl(36, 100%, 99%);
+  border: 1px solid hsl(233, 8%, 79%);
+  border-radius: 8px;
+  display: grid;
+  row-gap: 1.2rem;
+  padding: 2rem 1rem;
+}
+.form-right-form-field {
+  display: grid;
+  row-gap: 0.3rem;
+  position: relative;
+}
+.form-right-form-field > input {
+  padding: 0.6rem;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid hsl(233, 8%, 79%);
+}
+@media (max-width: 64rem) {
+  .form-right-form-field > input {
+    padding: 1rem;
+    font-size: 16px;
+  }
+}
+@media (max-width: 37.5rem) {
+  .form-right-form-field > input {
+    padding: 0.7rem;
+  }
+}
+.form-right-form-field > svg {
+  position: absolute;
+  right: 0.5rem;
+  top: 13%;
+  font-size: 20px;
+  display: none;
+}
+.form-right-form-field > p {
+  font-size: 12px;
+  margin-left: auto;
+  display: none;
+}
+.form-right-form .form-btn {
+  background-color: hsl(35, 77%, 62%);
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  color: hsl(36, 100%, 99%);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.form-right-form .form-btn:hover {
+  background-color: transparent;
+  color: hsl(236, 13%, 42%);
+  border: 1px solid hsl(35, 77%, 62%);
+}
+.form-right-form .form-btn:active {
+  margin: 0 0.2rem;
+}
+@media (max-width: 64rem) {
+  .form-right-form .form-btn {
+    padding: 1rem;
+    font-size: 20px;
+  }
+}
+@media (max-width: 37.5rem) {
+  .form-right-form .form-btn {
+    padding: 0.7rem;
+    font-size: 17px;
+  }
+}
+.form-right-form > p {
+  font-size: 9.5px;
+  text-align: center;
+}
+.form-right-form > p .special {
+  color: hsl(5, 85%, 63%);
+}
+@media (max-width: 64rem) {
+  .form-right-form > p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 37.5rem) {
+  .form-right-form > p {
+    font-size: 11px;
+  }
+}
+
+.error {
+  color: hsl(5, 85%, 63%);
+}
+.error > input {
+  border: 1px solid hsl(5, 85%, 63%);
+}
+.error > input::placeholder {
+  color: hsl(5, 85%, 63%);
+}
+.error > svg {
+  display: block;
+}
+.error > p {
+  display: block;
+}/*# sourceMappingURL=styles.css.map */
