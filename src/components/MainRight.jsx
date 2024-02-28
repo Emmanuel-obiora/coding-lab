@@ -63,14 +63,14 @@ const MainRight = () => {
   //   MainImg.src = smallImg[3].src;
   // }
 
-  const frame1 = document.getElementById("MainImg1");
-  const frame2 = document.getElementById("MainImg2");
-  const frame3 = document.getElementById("MainImg3");
-  const frame4 = document.getElementById("MainImg4");
+  // const frame1 = document.getElementById("MainImg1");
+  // const frame2 = document.getElementById("MainImg2");
+  // const frame3 = document.getElementById("MainImg3");
+  // const frame4 = document.getElementById("MainImg4");
 
-  const display frame1 = () {
-    frame1.className.add('show')
-  }
+  // const display frame1 = () {
+    // frame1.className.add('show')
+  // }
 
   return (
 
