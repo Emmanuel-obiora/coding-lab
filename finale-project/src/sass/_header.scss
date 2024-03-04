@@ -1,0 +1,136 @@
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-items:center;
+    justify-content: space-between;
+    margin: 0rem 6rem 0 6rem;
+    font-size: 16px;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    padding-bottom: 2rem;
+    padding-top: 1.8rem;
+    border-bottom: 2px solid $Light-grayish-blue;
+
+    @media(max-width:37.5rem){
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+    
+
+    &>div{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        @media (max-width:37.5rem){
+            margin-top: 1rem;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+    }
+
+    &-user{
+        
+        &-cart{
+            display: inline;
+
+            @media(max-width:37.5rem){
+                margin-left: 10rem;
+                width: 3rem;
+            }
+            
+            &:hover, a.active {
+           border: 2px;
+           color: $Grayish-blue;
+              }
+        }
+
+    &-avater{
+        width: 2rem;
+        height: 2rem;
+
+        &:hover, a.active {
+            border: 2px;
+            color: $Grayish-blue;
+            }
+
+            @media(max-width:37.5rem){
+                margin-left: .5rem;
+                width: 50px;
+                height: 50px;
+            }
+       } 
+    
+    }
+
+}
+
+.navbar{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    text-decoration: none;
+    position: relative;
+
+    @media(max-width:37.5rem){
+        flex-direction: column;
+        position: absolute;
+        background-color: $White;
+        margin-right: 35rem;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 25%;
+        height: 25%;
+        z-index: 999;
+        color: $Very-dark-blue;
+        display: none;
+       
+    }
+    
+    &>li a{
+        text-decoration: none;
+        font-size: 16px;
+        justify-items: center;
+        color:$Dark-grayish-blue;
+        transition: 0.3sec ease;
+
+        @media(max-width:37.5rem){
+            color: $Very-dark-blue;
+            display: flex;
+        }
+
+        &:hover, a.active {
+            border: 2px;
+            color: $Grayish-blue;
+
+            &>a.active::after{
+                content: "";
+                width: 30%;
+                height: 2px;
+                background-color: $Very-dark-blue;
+                position: absolute;
+                bottom: -4px;
+            }
+        }
+    }
+}
+@media(max-width:37.5rem){
+    .menu{
+        margin-left: 2.5rem;
+        margin-right: 2rem;
+        padding-top: 1rem;
+        z-index: 10;
+        &>img{
+        height: 1.8rem;
+         width: 1.5rem;
+        }
+    }
+}
+.open-mobile-nav{
+    display: flex;
+}
